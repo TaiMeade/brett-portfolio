@@ -87,6 +87,76 @@
       "alt": "Urban street photography",
       "category": "lifestyle",
       "featured": false
+    },
+    {
+      "id": 9,
+      "src": "/images/gallery/photo-09.jpg",
+      "alt": "Candid portrait session",
+      "category": "portraits",
+      "featured": true
+    },
+    {
+      "id": 10,
+      "src": "/images/gallery/photo-10.jpg",
+      "alt": "Forest trail at dusk",
+      "category": "landscapes",
+      "featured": false
+    },
+    {
+      "id": 11,
+      "src": "/images/gallery/photo-11.jpg",
+      "alt": "Birthday party celebration",
+      "category": "events",
+      "featured": true
+    },
+    {
+      "id": 12,
+      "src": "/images/gallery/photo-12.jpg",
+      "alt": "Home office workspace",
+      "category": "lifestyle",
+      "featured": false
+    },
+    {
+      "id": 13,
+      "src": "/images/gallery/photo-13.jpg",
+      "alt": "Family portrait outdoors",
+      "category": "portraits",
+      "featured": true
+    },
+    {
+      "id": 14,
+      "src": "/images/gallery/photo-14.jpg",
+      "alt": "Desert landscape",
+      "category": "landscapes",
+      "featured": false
+    },
+    {
+      "id": 15,
+      "src": "/images/gallery/photo-15.jpg",
+      "alt": "Corporate event",
+      "category": "events",
+      "featured": true
+    },
+    {
+      "id": 16,
+      "src": "/images/gallery/photo-16.jpg",
+      "alt": "Cooking in the kitchen",
+      "category": "lifestyle",
+      "featured": false
+    },
+    {
+      "id": 17,
+      "src": "/images/gallery/photo-17.jpg",
+      "alt": "Graduation portrait",
+      "category": "portraits",
+      "featured": true
+    },
+    {
+      "id": 18,
+      "src": "/images/gallery/photo-18.jpg",
+      "alt": "Lake reflection",
+      "category": "landscapes",
+      "featured": false
     }
   ],
   "social": {
