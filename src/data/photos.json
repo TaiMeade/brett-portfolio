@@ -34,126 +34,126 @@
   "gallery": [
     {
       "id": 1,
-      "src": "/images/gallery/photo-01.jpg",
+      "src": "./images/gallery/photo-01.jpg",
       "alt": "Portrait in golden hour light",
       "category": "portraits",
       "featured": true
     },
     {
       "id": 2,
-      "src": "/images/gallery/photo-02.jpg",
+      "src": "./images/gallery/photo-02.jpg",
       "alt": "Mountain landscape at sunrise",
       "category": "landscapes",
       "featured": true
     },
     {
       "id": 3,
-      "src": "/images/gallery/photo-03.jpg",
+      "src": "./images/gallery/photo-03.jpg",
       "alt": "Wedding celebration",
       "category": "events",
       "featured": false
     },
     {
       "id": 4,
-      "src": "/images/gallery/photo-04.jpg",
+      "src": "./images/gallery/photo-04.jpg",
       "alt": "Coffee shop lifestyle",
       "category": "lifestyle",
       "featured": true
     },
     {
       "id": 5,
-      "src": "/images/gallery/photo-05.jpg",
+      "src": "./images/gallery/photo-05.jpg",
       "alt": "Studio portrait with dramatic lighting",
       "category": "portraits",
       "featured": false
     },
     {
       "id": 6,
-      "src": "/images/gallery/photo-06.jpg",
+      "src": "./images/gallery/photo-06.jpg",
       "alt": "Coastal sunset panorama",
       "category": "landscapes",
       "featured": true
     },
     {
       "id": 7,
-      "src": "/images/gallery/photo-07.jpg",
+      "src": "./images/gallery/photo-07.jpg",
       "alt": "Concert photography",
       "category": "events",
       "featured": false
     },
     {
       "id": 8,
-      "src": "/images/gallery/photo-08.jpg",
+      "src": "./images/gallery/photo-08.jpg",
       "alt": "Urban street photography",
       "category": "lifestyle",
       "featured": false
     },
     {
       "id": 9,
-      "src": "/images/gallery/photo-09.jpg",
+      "src": "./images/gallery/photo-09.jpg",
       "alt": "Candid portrait session",
       "category": "portraits",
       "featured": true
     },
     {
       "id": 10,
-      "src": "/images/gallery/photo-10.jpg",
+      "src": "./images/gallery/photo-10.jpg",
       "alt": "Forest trail at dusk",
       "category": "landscapes",
       "featured": false
     },
     {
       "id": 11,
-      "src": "/images/gallery/photo-11.jpg",
+      "src": "./images/gallery/photo-11.jpg",
       "alt": "Birthday party celebration",
       "category": "events",
       "featured": true
     },
     {
       "id": 12,
-      "src": "/images/gallery/photo-12.jpg",
+      "src": "./images/gallery/photo-12.jpg",
       "alt": "Home office workspace",
       "category": "lifestyle",
       "featured": false
     },
     {
       "id": 13,
-      "src": "/images/gallery/photo-13.jpg",
+      "src": "./images/gallery/photo-13.jpg",
       "alt": "Family portrait outdoors",
       "category": "portraits",
       "featured": true
     },
     {
       "id": 14,
-      "src": "/images/gallery/photo-14.jpg",
+      "src": "./images/gallery/photo-14.jpg",
       "alt": "Desert landscape",
       "category": "landscapes",
       "featured": false
     },
     {
       "id": 15,
-      "src": "/images/gallery/photo-15.jpg",
+      "src": "./images/gallery/photo-15.jpg",
       "alt": "Corporate event",
       "category": "events",
       "featured": true
     },
     {
       "id": 16,
-      "src": "/images/gallery/photo-16.jpg",
+      "src": "./images/gallery/photo-16.jpg",
       "alt": "Cooking in the kitchen",
       "category": "lifestyle",
       "featured": false
     },
     {
       "id": 17,
-      "src": "/images/gallery/photo-17.jpg",
+      "src": "./images/gallery/photo-17.jpg",
       "alt": "Graduation portrait",
       "category": "portraits",
       "featured": true
     },
     {
       "id": 18,
-      "src": "/images/gallery/photo-18.jpg",
+      "src": "./images/gallery/photo-18.jpg",
       "alt": "Lake reflection",
       "category": "landscapes",
       "featured": false
