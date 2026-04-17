@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto">
         <!-- Image -->
         <div class="relative">
-          <div class="aspect-[3/4] overflow-hidden rounded-sm">
+          <div class="aspect-square overflow-hidden rounded-full">
             <img
               :src="siteData.about.profileImage"
               :alt="siteData.about.title"
