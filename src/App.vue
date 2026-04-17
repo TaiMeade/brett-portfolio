@@ -3,8 +3,8 @@
     <AppHeader />
     <v-main>
       <HeroSection />
-      <GallerySection />
       <AboutSection />
+      <GallerySection />
       <InquiryForm />
       <AppFooter />
     </v-main>

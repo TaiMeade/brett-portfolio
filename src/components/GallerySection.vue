@@ -3,9 +3,7 @@
     <v-container>
       <!-- Section header -->
       <div class="text-center mb-12">
-        <p class="text-xs font-body tracking-[0.3em] uppercase text-brand-500 mb-4">
-          Portfolio
-        </p>
+        <p class="text-xs font-body tracking-[0.3em] uppercase text-brand-500 mb-4">Portfolio</p>
         <h2 class="section-title text-3xl md:text-5xl text-brand-100 mb-6">
           Selected Work
         </h2>
@@ -38,30 +36,49 @@
       </div>
 
       <!-- Masonry-style grid -->
-      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-        <TransitionGroup name="fade-up">
-          <div
-            v-for="photo in filteredPhotos"
-            :key="photo.id"
-            class="gallery-item break-inside-avoid rounded-sm cursor-pointer"
-            @click="openLightbox(photo)"
-          >
-            <img
-              :src="photo.src"
-              :alt="photo.alt"
-              class="w-full rounded-sm"
-              loading="lazy"
-            />
-            <div class="overlay rounded-sm">
-              <div>
-                <p class="text-white font-body text-sm font-light">{{ photo.alt }}</p>
-                <p class="text-brand-400 text-xs uppercase tracking-widest mt-1">
-                  {{ getCategoryName(photo.category) }}
-                </p>
+      <v-row no-gutters class="ga-4">
+        <v-col
+          v-for="(col, colIndex) in photoColumns"
+          :key="colIndex"
+          :class="colIndex % 2 !== 0 ? 'pt-10' : ''"
+          class="d-flex flex-column ga-4"
+        >
+          <TransitionGroup name="fade-up">
+            <div
+              v-for="photo in col"
+              :key="photo.id"
+              class="gallery-item rounded-sm cursor-pointer"
+              @click="openLightbox(photo)"
+            >
+              <img
+                :src="photo.src"
+                :alt="photo.alt"
+                class="w-full rounded-sm"
+                loading="lazy"
+              />
+              <div class="overlay rounded-sm">
+                <div>
+                  <p class="text-white font-body text-sm font-light">{{ photo.alt }}</p>
+                  <p class="text-brand-400 text-xs uppercase tracking-widest mt-1">
+                    {{ getCategoryName(photo.category) }}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </TransitionGroup>
+          </TransitionGroup>
+        </v-col>
+      </v-row>
+
+      <!-- See More button -->
+      <div v-if="hasMore" class="flex justify-center mt-10">
+        <v-btn
+          size="small"
+          variant="outlined"
+          class="!border-brand-700 !text-brand-400 !tracking-widest !text-[10px] !font-body hover:!border-brand-400"
+          @click="showAll = true"
+        >
+          See More
+        </v-btn>
       </div>
 
       <!-- Empty state -->
@@ -95,16 +112,48 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+import { useDisplay } from 'vuetify'
 import siteData from '@/data/photos.json'
 
+const { smAndDown, mdAndDown } = useDisplay()
 const activeCategory = ref('all')
 const lightbox = ref(false)
 const activePhoto = ref(null)
 
+const NUM_COLUMNS = computed(() => {
+  if (smAndDown.value) return 1
+  if (mdAndDown.value) return 3
+  return 5
+})
+
+const INITIAL_VISIBLE = computed(() => {
+  if (smAndDown.value) return 2
+  if (mdAndDown.value) return 6
+  return 10
+})
+
+const showAll = ref(false)
+
 const filteredPhotos = computed(() => {
   if (activeCategory.value === 'all') return siteData.gallery
   return siteData.gallery.filter(p => p.category === activeCategory.value)
+})
+
+const visiblePhotos = computed(() => {
+  if (showAll.value) return filteredPhotos.value
+  return filteredPhotos.value.slice(0, INITIAL_VISIBLE.value)
+})
+
+const hasMore = computed(() => filteredPhotos.value.length > INITIAL_VISIBLE.value && !showAll.value)
+
+const photoColumns = computed(() => {
+  const n = NUM_COLUMNS.value
+  const cols = Array.from({ length: n }, () => [])
+  visiblePhotos.value.forEach((photo, i) => {
+    cols[i % n].push(photo)
+  })
+  return cols
 })
 
 function getCategoryName(categoryId) {
@@ -116,4 +165,8 @@ function openLightbox(photo) {
   activePhoto.value = photo
   lightbox.value = true
 }
+
+watch(activeCategory, () => {
+  showAll.value = false
+})
 </script>
