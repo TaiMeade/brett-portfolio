@@ -2,12 +2,12 @@
   "hero": {
     "headline": "Brett Photography",
     "tagline": "Capturing moments that tell your story",
-    "backgroundImage": "/images/hero.jpg"
+    "backgroundImage": "./images/hero.jpg"
   },
   "about": {
     "title": "About Me",
     "description": "I'm a photographer passionate about capturing authentic moments and creating timeless images. Whether it's portraits, landscapes, or events, I bring a creative eye and attention to detail to every shoot.",
-    "profileImage": "/images/about-profile.jpg"
+    "profileImage": "./images/about-profile.jpg"
   },
   "categories": [
     {
